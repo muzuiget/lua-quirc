@@ -1,7 +1,7 @@
 lua-quirc
 =========
 
-二维码(QRCode) 图像扫描库 quirc 的 lua 接口。
+二维码(QRCode) 图像扫描库 [quirc](https://github.com/dlbeer/quirc) 的 lua 接口。
 
 quirc 只支持 8bit 的无压缩灰度图像(下文简称 raw 格式)，像 jpg/png 等带压缩的格式需自行转换。
 
