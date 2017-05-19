@@ -1,0 +1,7 @@
+quirc/
+qrdump
+*.so
+*.raw
+*.png
+*.jpg
+*.hex
