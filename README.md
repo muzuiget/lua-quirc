@@ -1,24 +1,31 @@
 lua-quirc
 =========
 
-二维码(QRCode) 图像扫描库 [quirc](https://github.com/dlbeer/quirc) 的 lua 接口。
+二维码(QRCode)图像扫描库 [quirc](https://github.com/dlbeer/quirc) 的 Lua 接口。
 
 quirc 只支持 8bit 的无压缩灰度图像(下文简称 raw 格式)，像 jpg/png 等带压缩的格式需自行转换。
 
 编译
 ----
 
-下载 quirc 源码到本文件夹，并编译
+安装依赖：
 
-```bash
-git clone https://github.com/dlbeer/quirc.git
-make
+```
+sudo apt-get install libjpeg-dev libpng-dev
 ```
 
-默认编译 3 个 target
+下载 quirc 源码到本文件夹：
 
-* quirc.so 就是引入在应用项目的 lua 模块
-* readraw.so 从 raw 格式的 lightuserdata 模块，测试演示用。
+```bash
+COMMIT=307473dbcab5e6c9654944c034b2426f46ac509f
+wget -qO- https://github.com/dlbeer/quirc/archive/$COMMIT.tar.gz | tar -xzv
+mv quirc-$COMMIT quirc
+```
+
+运行 `make` 编译，默认编译 3 个 target：
+
+* quirc.so 就是引入在应用项目的 Lua 模块。
+* readraw.so 读取 raw 格式的 lightuserdata 模块，测试演示用。
 * qrdump 可执行命令，直接分析 jpg/png 中的二维码及信息，依赖 libjpeg/libpng 库，测试演示用。
 
 RAW 格式
