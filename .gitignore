@@ -5,3 +5,5 @@ qrdump
 *.png
 *.jpg
 *.hex
+*.zip
+*.tar.gz
